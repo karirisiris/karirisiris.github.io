@@ -2,11 +2,14 @@
 <html>
 <head>
     <title>Anda's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Pixel font -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    <style>
+    <style>* {
+    box-sizing: border-box;
+}
         body {
             background-color: #111;
             color: #fff;
@@ -16,10 +19,13 @@
 
         /* NAVBAR */
         .navbar {
-            background: #000;
-            padding: 20px;
-            border-bottom: 4px solid #fff;
-        }
+    background: #000;
+    padding: 20px;
+    border-bottom: 4px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
         .navbar a {
     color: #00ffcc;
@@ -36,8 +42,10 @@
 
         /* MAIN AREA */
         .container {
-            padding: 40px;
-        }
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
         /* BLOCKY POSTS */
         .post {
@@ -61,6 +69,40 @@
             font-size: 11px;
             line-height: 1.6;
         }
+        /* 📱 MOBILE FIXES */
+@media (max-width: 600px) {
+
+    .container {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 11px;
+    }
+
+    p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .post {
+        padding: 14px;
+        box-shadow: 4px 4px 0 #000;
+    }
+
+    .navbar {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 9px;
+    }
+}
     </style>
 </head>
 
