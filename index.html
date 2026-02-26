@@ -127,6 +127,41 @@
     .navbar a {
         font-size: 9px;
     }
+    /* ===== NEON GLOW UPGRADE ===== */
+
+.blog-title {
+  text-shadow:
+    0 0 5px #00fff0,
+    0 0 10px #00fff0,
+    0 0 20px #00fff0;
+}
+
+.post-box {
+  border: 2px solid #00fff0;
+  box-shadow:
+    0 0 10px rgba(0,255,240,0.5),
+    0 0 20px rgba(0,255,240,0.3);
+  transition: all 0.25s ease;
+}
+
+.post-box:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 15px rgba(0,255,240,0.8),
+    0 0 30px rgba(0,255,240,0.5);
+}
+
+.read-more {
+  box-shadow: 0 0 8px #00fff0;
+  transition: all 0.2s ease;
+}
+
+.read-more:hover {
+  box-shadow:
+    0 0 12px #00fff0,
+    0 0 24px #00fff0;
+  transform: scale(1.05);
+}
 }
     </style>
 </head>
@@ -140,7 +175,7 @@
     </div>
 
     <div class="container">
-        <h1>ANDA'S BLOG </h1>
+        <h1 class="blog-title">ANDA'S BLOG</h1>
         <div class="post">
             <h2>FIRST LOG</h2>
             <p>I just unlocked pixel mode. This looks kinda fire.</p>
