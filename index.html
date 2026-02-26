@@ -162,6 +162,35 @@
     0 0 24px #00fff0;
   transform: scale(1.05);
 }
+/* hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #00ffff;
+  cursor: pointer;
+}
+
+/* mobile layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    display: none;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar.active a {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
 }
     </style>
 </head>
@@ -172,6 +201,9 @@
         <a href="#">HOME</a>
         <a href="#">ABOUT</a>
         <a href="#">GAMES</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+  ☰
+</div>
     </div>
 
     <div class="container">
@@ -189,5 +221,9 @@
         </div>
     </div>
 
-</body>
+<script>
+function toggleMenu() {
+  document.querySelector(".navbar").classList.toggle("active");
+}
+</script></body>
 </html>
